@@ -1,0 +1,68 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Askerskolen Biblio Kiosk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: sans-serif; background: #f9f9f9; padding: 2em; }
+    h1 { color: #333; }
+    select, button { font-size: 1.1em; padding: 0.5em; margin-top: 1em; }
+  </style>
+</head>
+<body>
+  <h1>Velg skolebibliotek</h1>
+  <select id="schoolUrl">
+    <option value="">-- Velg skole --</option>
+    <option value="https://arnestad.bib.no/cgi-bin/skoleautomat">Arnestad skole</option>
+    <option value="https://billingstad.bib.no/cgi-bin/skoleautomat">Billingstad skole</option>
+    <option value="https://blakstad.bib.no/cgi-bin/skoleautomat">Blakstad skole</option>
+    <option value="https://bondi.bib.no/cgi-bin/skoleautomat">Bondi skole</option>
+    <option value="https://borgen.bib.no/cgi-bin/skoleautomat">Borgen skole</option>
+    <option value="https://drengsrud.bib.no/cgi-bin/skoleautomat">Drengsrud skole</option>
+    <option value="https://folkestad.bib.no/cgi-bin/skoleautomat">Folkestad skole</option>
+    <option value="https://frydenlund-royken.bib.no/cgi-bin/skoleautomat">Frydenlund skole</option>
+    <option value="https://hagalokka.bib.no/cgi-bin/skoleautomat">Hagaløkka skole</option>
+    <option value="https://heggedal.bib.no/cgi-bin/skoleautomat">Heggedal skole</option>
+    <option value="https://hofstad.bib.no/cgi-bin/skoleautomat">Hofstad skole</option>
+    <option value="https://hovedgarden.bib.no/cgi-bin/skoleautomat">Hovedgården skole</option>
+    <option value="https://hvalstad.bib.no/cgi-bin/skoleautomat">Hvalstad skole</option>
+    <option value="https://hyggen.bib.no/cgi-bin/skoleautomat">Hyggen skole</option>
+    <option value="https://janslokka.bib.no/cgi-bin/skoleautomat">Jansløkka skole</option>
+    <option value="https://landoya.bib.no/cgi-bin/skoleautomat">Landøya skole</option>
+    <option value="https://mellomnes.bib.no/cgi-bin/skoleautomat">Mellom Nes skole</option>
+    <option value="https://midtbygda.bib.no/cgi-bin/skoleautomat">Midtbygda</option>
+    <option value="https://nesoya.bib.no/cgi-bin/skoleautomat">Nesøya skole</option>
+    <option value="https://naersnesbskole.bib.no/cgi-bin/skoleautomat">Nærsnes skole</option>
+    <option value="https://risenga.bib.no/cgi-bin/skoleautomat">Risenga skole</option>
+    <option value="https://ronningen.bib.no/cgi-bin/skoleautomat">Rønningen skole</option>
+    <option value="https://slemmestadskole.bib.no/cgi-bin/skoleautomat">Slemmestad skole</option>
+    <option value="https://slemmestadu.bib.no/cgi-bin/skoleautomat">Slemmestad ungdomsskole</option>
+    <option value="https://solberg.bib.no/cgi-bin/skoleautomat">Solberg skole</option>
+    <option value="https://solvang.bib.no/cgi-bin/skoleautomat">Solvang skole</option>
+    <option value="https://spikkestadb.bib.no/cgi-bin/skoleautomat">Spikkestad skole</option>
+    <option value="https://spikkestadu.bib.no/cgi-bin/skoleautomat">Spikkestad ungdomsskole</option>
+    <option value="https://sydskogen.bib.no/cgi-bin/skoleautomat">Sydskogen skole</option>
+    <option value="https://torstad.bib.no/cgi-bin/skoleautomat">Torstad skole</option>
+    <option value="https://torvbraaten.bib.no/cgi-bin/skoleautomat">Torvbråten skole</option>
+    <option value="https://vardasen.bib.no/cgi-bin/skoleautomat">Vardåsen skole</option>
+    <option value="https://vettre.bib.no/cgi-bin/skoleautomat">Vettre skole</option>
+    <option value="https://vollen.bib.no/cgi-bin/skoleautomat">Vollen skole</option>
+  </select>
+  <br>
+  <button onclick="goToLibrary()">Gå til bibliotek</button>
+
+  <script>
+    function goToLibrary() {
+      const url = document.getElementById('schoolUrl').value;
+      if (url) {
+        window.location.href = url;
+      } else {
+        alert('Velg en skole fra listen.');
+      }
+    }
+  </script>
+</body>
+</html>
