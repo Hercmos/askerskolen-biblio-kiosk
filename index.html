@@ -1,21 +1,42 @@
-
-
 <!DOCTYPE html>
-<html>
+<html lang="no">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Askerskolen Biblio Kiosk</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body { font-family: sans-serif; background: #f9f9f9; padding: 2em; }
-    h1 { color: #333; }
-    select, button { font-size: 1.1em; padding: 0.5em; margin-top: 1em; }
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f2f2f2;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+      color: #003366;
+    }
+    select, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+    }
+    .logo {
+      width: 120px;
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
-  <h1>Velg skolebibliotek</h1>
-  <select id="schoolUrl">
-    <option value="">-- Velg skole --</option>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Asker_kommunevapen.png" alt="Asker kommune" class="logo">
+  <h1>Askerskolen Bibliotek Kiosk</h1>
+  <label for="skolevelger">Velg din skole:</label>
+  <select id="skolevelger">
+    <option value="">-- Velg en skole --</option>
     <option value="https://arnestad.bib.no/cgi-bin/skoleautomat">Arnestad skole</option>
     <option value="https://billingstad.bib.no/cgi-bin/skoleautomat">Billingstad skole</option>
     <option value="https://blakstad.bib.no/cgi-bin/skoleautomat">Blakstad skole</option>
@@ -51,18 +72,11 @@
     <option value="https://vettre.bib.no/cgi-bin/skoleautomat">Vettre skole</option>
     <option value="https://vollen.bib.no/cgi-bin/skoleautomat">Vollen skole</option>
   </select>
-  <br>
-  <button onclick="goToLibrary()">Gå til bibliotek</button>
-
-  <script>
-    function goToLibrary() {
-      const url = document.getElementById('schoolUrl').value;
-      if (url) {
-        window.location.href = url;
-      } else {
-        alert('Velg en skole fra listen.');
-      }
-    }
-  </script>
+  <br />
+  <button onclick="
+    const url = document.getElementById('skolevelger').value;
+    if (url) window.location.href = url;
+    else alert('Vennligst velg en skole.');
+  ">Gå til bibliotek</button>
 </body>
 </html>
